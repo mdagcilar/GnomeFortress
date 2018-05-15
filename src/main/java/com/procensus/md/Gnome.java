@@ -54,4 +54,8 @@ class Gnome {
     boolean isAlive(){
         return strength > 0;
     }
+
+    void consumeHealthPotion(){
+        strength +=5;
+    }
 }

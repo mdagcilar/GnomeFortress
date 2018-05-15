@@ -47,6 +47,16 @@ class Tile {
         return Character.isDigit(character);
     }
 
+    // Returns true if the tile is a BOMB 'b'
+    boolean isBomb() {
+        return character == 'b';
+    }
+
+    // Returns true if the tile is a health potion 'h'
+    boolean isHealthPotion() {
+        return character == 'h';
+    }
+
     // moves the Gnome character on the map
     void moveIndicator(Tile oldLocation, int groupId) {
         oldLocation.character = ' ';

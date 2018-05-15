@@ -148,6 +148,7 @@ class Fortress {
 
     void moveNorth(int groupId, Gnome gnome, Tile currLocation) {
         Tile newLocation = floorPlan[currLocation.getRow() - 1][currLocation.getColumn()];
+        checkForPotionsAndBombs(newLocation, gnome);
 
         newLocation.moveIndicator(currLocation, groupId);
         currLocation.removeGnome();
@@ -157,6 +158,7 @@ class Fortress {
 
     void moveSouth(int groupId, Gnome gnome, Tile currLocation) {
         Tile newLocation = floorPlan[currLocation.getRow() + 1][currLocation.getColumn()];
+        checkForPotionsAndBombs(newLocation, gnome);
 
         newLocation.moveIndicator(currLocation, groupId);
         currLocation.removeGnome();
@@ -166,6 +168,7 @@ class Fortress {
 
     void moveWest(int groupId, Gnome gnome, Tile currLocation) {
         Tile newLocation = floorPlan[currLocation.getRow()][currLocation.getColumn() - 1];
+        checkForPotionsAndBombs(newLocation, gnome);
 
         newLocation.moveIndicator(currLocation, groupId);
         currLocation.removeGnome();
@@ -175,10 +178,24 @@ class Fortress {
 
     void moveEast(int groupId, Gnome gnome, Tile currLocation) {
         Tile newLocation = floorPlan[currLocation.getRow()][currLocation.getColumn() + 1];
+        checkForPotionsAndBombs(newLocation, gnome);
 
         newLocation.moveIndicator(currLocation, groupId);
         currLocation.removeGnome();
         newLocation.setGnome(gnome);
         gnome.setTile(newLocation);
+    }
+
+    // Checks the Tile for health potions and bombs on the floor plan
+    private void checkForPotionsAndBombs(Tile newLocation, Gnome gnome) {
+        if (newLocation.isHealthPotion()) {
+            gnome.consumeHealthPotion();
+            System.out.println("gnome " + gnome.getId() + " from team " + gnome.getGroupId()
+                    + " consumed a health potion at " + newLocation.getCoordinates() + " increasing hit points by 5, new hp: " + gnome.getStrength());
+        } else if (newLocation.isBomb()) {
+            gnome.kill();
+            System.out.println("gnome " + gnome.getId() + " from team " + gnome.getGroupId()
+                    + " just uncovered a bomb at " + newLocation.getCoordinates() + " and died instantly from the blast!");
+        }
     }
 }
