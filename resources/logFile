@@ -2,3 +2,628 @@
 15-05-2018 19:49:21 INFO [main] Fortress - Gnomes have been placed
 15-05-2018 19:49:21 INFO [main] GameManager - Battle begins 
 15-05-2018 19:49:21 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 19:53:26 INFO [main] GameManager - 2 groups have been made with 10 gnomes per group
+15-05-2018 19:53:26 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 19:53:26 INFO [main] GameManager - Battle begins 
+15-05-2018 19:53:26 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 20:36:15 DEBUG [main] Fortress - FileNotFoundException: Failed to read floor plan from resources/floorplan_originalresources\floorplan_original (The system cannot find the file specified)
+15-05-2018 20:36:15 INFO [main] GameManager - 2 groups have been made with 10 gnomes per group
+15-05-2018 20:36:26 DEBUG [main] Fortress - FileNotFoundException: Failed to read floor plan from resources/floorplan_originalresources\floorplan_original (The system cannot find the file specified)
+15-05-2018 20:36:26 INFO [main] GameManager - 2 groups have been made with 10 gnomes per group
+15-05-2018 20:37:18 INFO [main] GameManager - 2 groups have been made with 10 gnomes per group
+15-05-2018 20:37:18 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 20:37:18 INFO [main] GameManager - Battle begins 
+15-05-2018 20:37:18 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 20:37:22 INFO [main] GameManager - 2 groups have been made with 10 gnomes per group
+15-05-2018 20:37:22 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 20:37:22 INFO [main] GameManager - Battle begins 
+15-05-2018 20:37:22 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 20:37:27 INFO [main] GameManager - 2 groups have been made with 10 gnomes per group
+15-05-2018 20:37:27 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 20:37:27 INFO [main] GameManager - Battle begins 
+15-05-2018 20:37:27 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 20:41:22 INFO [main] GameManager - 2 groups have been made with 10 gnomes per group
+15-05-2018 20:41:22 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 20:41:22 INFO [main] GameManager - Battle begins 
+15-05-2018 20:41:22 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:14:19 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 21:14:19 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:14:19 INFO [main] GameManager - Battle begins 
+15-05-2018 21:14:19 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:15:12 INFO [main] GameManager - 5 groups have been made with 5 gnomes per group
+15-05-2018 21:15:12 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:15:12 INFO [main] GameManager - Battle begins 
+15-05-2018 21:15:12 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:31:29 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 21:31:29 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:31:29 INFO [main] GameManager - Battle begins 
+15-05-2018 21:31:29 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:31:34 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 21:31:34 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:31:34 INFO [main] GameManager - Battle begins 
+15-05-2018 21:31:34 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:44:24 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 21:44:24 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:44:24 INFO [main] GameManager - Battle begins 
+15-05-2018 21:44:24 INFO [main] Fortress - gnome 2 from team 3 just uncovered a bomb and died instantly from the blast!
+15-05-2018 21:44:24 INFO [main] Fortress - gnome 2 from team 1 consumed a health potion increasing hit points by 5! New health 20
+15-05-2018 21:44:24 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:44:55 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 21:44:55 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:44:55 INFO [main] GameManager - Battle begins 
+15-05-2018 21:44:55 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:44:59 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 21:44:59 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:44:59 INFO [main] GameManager - Battle begins 
+15-05-2018 21:44:59 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:45:02 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 21:45:02 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:45:02 INFO [main] GameManager - Battle begins 
+15-05-2018 21:45:02 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:47:14 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 21:47:14 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:47:14 INFO [main] GameManager - Battle begins 
+15-05-2018 21:47:14 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:47:37 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 21:47:37 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:47:37 INFO [main] GameManager - Battle begins 
+15-05-2018 21:47:37 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:47:49 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 21:47:49 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:47:49 INFO [main] GameManager - Battle begins 
+15-05-2018 21:47:49 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:47:55 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 21:47:55 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:47:55 INFO [main] GameManager - Battle begins 
+15-05-2018 21:47:55 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:48:37 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 21:48:37 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:48:37 INFO [main] GameManager - Battle begins 
+15-05-2018 21:48:37 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:48:41 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 21:48:41 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:48:41 INFO [main] GameManager - Battle begins 
+15-05-2018 21:48:41 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:48:46 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 21:48:46 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:48:46 INFO [main] GameManager - Battle begins 
+15-05-2018 21:48:46 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:48:54 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 21:48:54 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:48:54 INFO [main] GameManager - Battle begins 
+15-05-2018 21:48:54 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:49:05 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 21:49:05 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:49:05 INFO [main] GameManager - Battle begins 
+15-05-2018 21:49:05 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:49:10 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 21:49:10 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:49:10 INFO [main] GameManager - Battle begins 
+15-05-2018 21:49:10 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:49:14 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 21:49:14 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:49:14 INFO [main] GameManager - Battle begins 
+15-05-2018 21:49:14 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:49:18 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 21:49:18 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:49:18 INFO [main] GameManager - Battle begins 
+15-05-2018 21:49:18 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:49:23 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 21:49:23 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:49:23 INFO [main] GameManager - Battle begins 
+15-05-2018 21:49:23 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:49:27 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 21:49:27 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:49:27 INFO [main] GameManager - Battle begins 
+15-05-2018 21:49:27 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 21:51:14 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 21:51:14 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 21:51:14 INFO [main] GameManager - Battle begins 
+15-05-2018 21:51:14 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:03:28 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 22:03:28 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:03:28 INFO [main] GameManager - Battle begins 
+15-05-2018 22:03:28 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:03:33 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 22:03:33 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:03:33 INFO [main] GameManager - Battle begins 
+15-05-2018 22:03:33 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:03:36 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 22:03:36 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:03:36 INFO [main] GameManager - Battle begins 
+15-05-2018 22:03:36 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:10:00 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 22:10:00 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:10:00 INFO [main] GameManager - Battle begins 
+15-05-2018 22:10:00 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:10:16 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 22:10:16 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:10:16 INFO [main] GameManager - Battle begins 
+15-05-2018 22:10:16 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:11:39 INFO [main] GameManager - 4 groups have been made with 4 gnomes per group
+15-05-2018 22:11:39 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:11:39 INFO [main] GameManager - Battle begins 
+15-05-2018 22:11:39 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:12:05 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:12:05 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:12:05 INFO [main] GameManager - Battle begins 
+15-05-2018 22:12:05 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:13:07 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:13:07 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:13:07 INFO [main] GameManager - Battle begins 
+15-05-2018 22:13:07 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:13:29 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:13:29 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:13:29 INFO [main] GameManager - Battle begins 
+15-05-2018 22:13:29 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:14:43 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:14:43 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:14:43 INFO [main] GameManager - Battle begins 
+15-05-2018 22:14:43 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:15:01 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:15:01 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:15:01 INFO [main] GameManager - Battle begins 
+15-05-2018 22:15:01 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:15:26 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:15:26 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:15:26 INFO [main] GameManager - Battle begins 
+15-05-2018 22:15:26 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:15:30 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:15:30 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:15:30 INFO [main] GameManager - Battle begins 
+15-05-2018 22:15:30 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:15:35 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:15:35 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:15:35 INFO [main] GameManager - Battle begins 
+15-05-2018 22:15:35 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:15:38 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:15:38 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:15:38 INFO [main] GameManager - Battle begins 
+15-05-2018 22:15:38 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:15:51 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:15:51 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:15:51 INFO [main] GameManager - Battle begins 
+15-05-2018 22:15:51 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:16:49 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:16:49 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:16:49 INFO [main] GameManager - Battle begins 
+15-05-2018 22:16:49 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:16:53 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:16:53 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:16:53 INFO [main] GameManager - Battle begins 
+15-05-2018 22:16:53 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:20:46 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:20:46 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:20:46 INFO [main] GameManager - Battle begins 
+15-05-2018 22:30:45 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:37:29 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:37:29 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:37:29 INFO [main] GameManager - Battle begins 
+15-05-2018 22:37:29 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:37:35 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:37:35 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:37:35 INFO [main] GameManager - Battle begins 
+15-05-2018 22:37:44 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:37:44 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:37:44 INFO [main] GameManager - Battle begins 
+15-05-2018 22:37:56 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:37:56 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:37:56 INFO [main] GameManager - Battle begins 
+15-05-2018 22:38:39 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:38:39 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:38:39 INFO [main] GameManager - Battle begins 
+15-05-2018 22:38:39 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:38:42 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:38:42 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:38:42 INFO [main] GameManager - Battle begins 
+15-05-2018 22:38:42 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:38:46 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:38:46 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:38:46 INFO [main] GameManager - Battle begins 
+15-05-2018 22:38:46 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:38:52 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:38:52 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:38:52 INFO [main] GameManager - Battle begins 
+15-05-2018 22:38:52 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:38:56 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:38:56 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:38:56 INFO [main] GameManager - Battle begins 
+15-05-2018 22:38:56 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:44:22 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:44:22 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:44:22 INFO [main] GameManager - Battle begins 
+15-05-2018 22:44:22 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:45:51 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:45:51 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:45:51 INFO [main] GameManager - Battle begins 
+15-05-2018 22:45:51 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:46:44 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:46:44 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:46:44 INFO [main] GameManager - Battle begins 
+15-05-2018 22:46:46 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:50:23 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:50:23 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:50:23 INFO [main] GameManager - Battle begins 
+15-05-2018 22:50:24 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:51:21 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:51:21 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:51:21 INFO [main] GameManager - Battle begins 
+15-05-2018 22:51:22 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:57:20 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:57:20 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:57:20 INFO [main] GameManager - Battle begins 
+15-05-2018 22:57:21 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:58:00 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:58:00 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:58:00 INFO [main] GameManager - Battle begins 
+15-05-2018 22:58:02 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:58:15 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:58:15 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:58:15 INFO [main] GameManager - Battle begins 
+15-05-2018 22:58:17 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:58:24 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:58:24 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:58:24 INFO [main] GameManager - Battle begins 
+15-05-2018 22:58:24 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:58:48 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:58:48 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:58:48 INFO [main] GameManager - Battle begins 
+15-05-2018 22:58:48 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:58:51 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:58:51 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:58:51 INFO [main] GameManager - Battle begins 
+15-05-2018 22:58:52 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:58:55 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:58:55 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:58:55 INFO [main] GameManager - Battle begins 
+15-05-2018 22:58:55 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:58:58 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:58:58 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:58:58 INFO [main] GameManager - Battle begins 
+15-05-2018 22:58:59 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:59:02 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:59:02 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:59:02 INFO [main] GameManager - Battle begins 
+15-05-2018 22:59:02 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:59:05 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:59:05 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:59:05 INFO [main] GameManager - Battle begins 
+15-05-2018 22:59:07 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:59:11 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:59:11 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:59:11 INFO [main] GameManager - Battle begins 
+15-05-2018 22:59:12 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:59:14 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:59:14 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:59:14 INFO [main] GameManager - Battle begins 
+15-05-2018 22:59:15 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 22:59:18 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 22:59:18 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 22:59:18 INFO [main] GameManager - Battle begins 
+15-05-2018 22:59:19 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:00:59 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:00:59 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:00:59 INFO [main] GameManager - Battle begins 
+15-05-2018 23:01:00 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:01:10 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:01:10 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:01:10 INFO [main] GameManager - Battle begins 
+15-05-2018 23:01:11 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:01:14 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:01:14 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:01:14 INFO [main] GameManager - Battle begins 
+15-05-2018 23:01:16 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:01:19 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:01:19 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:01:19 INFO [main] GameManager - Battle begins 
+15-05-2018 23:01:21 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:01:24 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:01:24 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:01:24 INFO [main] GameManager - Battle begins 
+15-05-2018 23:01:26 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:01:29 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:01:29 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:01:29 INFO [main] GameManager - Battle begins 
+15-05-2018 23:01:30 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:01:38 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:01:38 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:01:38 INFO [main] GameManager - Battle begins 
+15-05-2018 23:01:39 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:01:46 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:01:46 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:01:46 INFO [main] GameManager - Battle begins 
+15-05-2018 23:01:47 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:01:54 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:01:54 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:01:54 INFO [main] GameManager - Battle begins 
+15-05-2018 23:01:55 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:02:53 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:02:53 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:02:53 INFO [main] GameManager - Battle begins 
+15-05-2018 23:02:53 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:05:32 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:05:32 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:05:32 INFO [main] GameManager - Battle begins 
+15-05-2018 23:05:32 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:09:20 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:09:20 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:09:20 INFO [main] GameManager - Battle begins 
+15-05-2018 23:09:20 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:10:10 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:10:10 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:10:10 INFO [main] GameManager - Battle begins 
+15-05-2018 23:10:10 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:11:04 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:11:04 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:11:04 INFO [main] GameManager - Battle begins 
+15-05-2018 23:11:04 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:11:26 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:11:26 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:11:26 INFO [main] GameManager - Battle begins 
+15-05-2018 23:11:27 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:13:18 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:13:18 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:13:18 INFO [main] GameManager - Battle begins 
+15-05-2018 23:13:18 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:14:19 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:14:19 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:14:19 INFO [main] GameManager - Battle begins 
+15-05-2018 23:14:19 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:16:12 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:16:12 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:16:12 INFO [main] GameManager - Battle begins 
+15-05-2018 23:16:12 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:17:18 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:17:18 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:17:18 INFO [main] GameManager - Battle begins 
+15-05-2018 23:17:18 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:18:27 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:18:27 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:18:27 INFO [main] GameManager - Battle begins 
+15-05-2018 23:18:27 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:22:28 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:22:28 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:22:28 INFO [main] GameManager - Battle begins 
+15-05-2018 23:22:28 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:23:04 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:23:04 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:23:04 INFO [main] GameManager - Battle begins 
+15-05-2018 23:25:19 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:25:19 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:25:19 INFO [main] GameManager - Battle begins 
+15-05-2018 23:32:31 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:32:31 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:32:31 INFO [main] GameManager - Battle begins 
+15-05-2018 23:32:31 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:32:51 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:32:51 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:32:51 INFO [main] GameManager - Battle begins 
+15-05-2018 23:32:51 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:32:54 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:32:54 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:32:54 INFO [main] GameManager - Battle begins 
+15-05-2018 23:32:54 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:33:01 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:33:01 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:33:01 INFO [main] GameManager - Battle begins 
+15-05-2018 23:33:01 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:33:22 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:33:22 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:33:22 INFO [main] GameManager - Battle begins 
+15-05-2018 23:33:22 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:33:27 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:33:27 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:33:27 INFO [main] GameManager - Battle begins 
+15-05-2018 23:33:27 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:33:31 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:33:31 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:33:31 INFO [main] GameManager - Battle begins 
+15-05-2018 23:33:31 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:33:34 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:33:34 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:33:34 INFO [main] GameManager - Battle begins 
+15-05-2018 23:33:34 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:33:46 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:33:46 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:33:46 INFO [main] GameManager - Battle begins 
+15-05-2018 23:33:46 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:34:19 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:34:19 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:34:19 INFO [main] GameManager - Battle begins 
+15-05-2018 23:34:19 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:35:09 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:35:09 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:35:09 INFO [main] GameManager - Battle begins 
+15-05-2018 23:35:09 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:36:23 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:36:23 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:36:23 INFO [main] GameManager - Battle begins 
+15-05-2018 23:36:23 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:36:29 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:36:29 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:36:29 INFO [main] GameManager - Battle begins 
+15-05-2018 23:36:29 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:36:34 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:36:34 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:36:34 INFO [main] GameManager - Battle begins 
+15-05-2018 23:36:34 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:36:38 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:36:38 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:36:38 INFO [main] GameManager - Battle begins 
+15-05-2018 23:36:38 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:39:11 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:39:11 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:39:11 INFO [main] GameManager - Battle begins 
+15-05-2018 23:39:11 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:40:02 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:40:02 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:40:02 INFO [main] GameManager - Battle begins 
+15-05-2018 23:40:02 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:40:45 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:40:45 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:40:45 INFO [main] GameManager - Battle begins 
+15-05-2018 23:40:45 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:41:05 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:41:05 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:41:05 INFO [main] GameManager - Battle begins 
+15-05-2018 23:41:05 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:41:24 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:41:24 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:41:24 INFO [main] GameManager - Battle begins 
+15-05-2018 23:41:24 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:41:52 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:41:52 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:41:52 INFO [main] GameManager - Battle begins 
+15-05-2018 23:41:52 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:41:57 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:41:58 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:41:58 INFO [main] GameManager - Battle begins 
+15-05-2018 23:41:58 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:42:06 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:42:06 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:42:06 INFO [main] GameManager - Battle begins 
+15-05-2018 23:42:06 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:42:12 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:42:12 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:42:12 INFO [main] GameManager - Battle begins 
+15-05-2018 23:42:12 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:46:04 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:46:04 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:46:04 INFO [main] GameManager - Battle begins 
+15-05-2018 23:46:04 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:46:09 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:46:09 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:46:09 INFO [main] GameManager - Battle begins 
+15-05-2018 23:46:09 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:46:15 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:46:15 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:46:15 INFO [main] GameManager - Battle begins 
+15-05-2018 23:46:15 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:46:21 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:46:21 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:46:21 INFO [main] GameManager - Battle begins 
+15-05-2018 23:46:21 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:46:27 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:46:27 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:46:27 INFO [main] GameManager - Battle begins 
+15-05-2018 23:46:27 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:46:34 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:46:34 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:46:34 INFO [main] GameManager - Battle begins 
+15-05-2018 23:46:34 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:46:39 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:46:39 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:46:39 INFO [main] GameManager - Battle begins 
+15-05-2018 23:46:39 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:46:47 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:46:47 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:46:47 INFO [main] GameManager - Battle begins 
+15-05-2018 23:46:47 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:46:52 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:46:52 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:46:52 INFO [main] GameManager - Battle begins 
+15-05-2018 23:46:52 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:46:56 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:46:56 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:46:56 INFO [main] GameManager - Battle begins 
+15-05-2018 23:46:56 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:47:02 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:47:02 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:47:02 INFO [main] GameManager - Battle begins 
+15-05-2018 23:47:02 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:47:08 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:47:08 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:47:08 INFO [main] GameManager - Battle begins 
+15-05-2018 23:47:08 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:47:14 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:47:14 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:47:14 INFO [main] GameManager - Battle begins 
+15-05-2018 23:47:14 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:47:20 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:47:20 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:47:20 INFO [main] GameManager - Battle begins 
+15-05-2018 23:47:20 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:47:26 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:47:26 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:47:26 INFO [main] GameManager - Battle begins 
+15-05-2018 23:47:27 INFO [main] GameManager - Congratulations battle has ended
+15-05-2018 23:48:20 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+15-05-2018 23:48:20 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 23:48:20 INFO [main] GameManager - Battle begins 
+15-05-2018 23:48:20 INFO [main] GameManager - Congratulations battle has ended
+16-05-2018 00:09:31 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+16-05-2018 00:09:31 INFO [main] Fortress - Gnomes have been placed
+16-05-2018 00:09:31 INFO [main] GameManager - Battle begins 
+16-05-2018 00:09:31 INFO [main] GameManager - Congratulations battle has ended
+16-05-2018 00:14:37 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+16-05-2018 00:14:37 INFO [main] Fortress - Gnomes have been placed
+16-05-2018 00:14:37 INFO [main] GameManager - Battle begins 
+16-05-2018 00:14:37 INFO [main] GameManager - Congratulations battle has ended
+16-05-2018 00:14:42 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+16-05-2018 00:14:42 INFO [main] Fortress - Gnomes have been placed
+16-05-2018 00:14:42 INFO [main] GameManager - Battle begins 
+16-05-2018 00:14:42 INFO [main] GameManager - Congratulations battle has ended
+16-05-2018 00:14:46 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+16-05-2018 00:14:46 INFO [main] Fortress - Gnomes have been placed
+16-05-2018 00:14:46 INFO [main] GameManager - Battle begins 
+16-05-2018 00:14:46 INFO [main] GameManager - Congratulations battle has ended
+16-05-2018 00:14:49 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+16-05-2018 00:14:49 INFO [main] Fortress - Gnomes have been placed
+16-05-2018 00:14:49 INFO [main] GameManager - Battle begins 
+16-05-2018 00:14:49 INFO [main] GameManager - Congratulations battle has ended
+16-05-2018 00:14:51 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+16-05-2018 00:14:51 INFO [main] Fortress - Gnomes have been placed
+16-05-2018 00:14:51 INFO [main] GameManager - Battle begins 
+16-05-2018 00:14:51 INFO [main] GameManager - Congratulations battle has ended
+16-05-2018 00:14:54 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+16-05-2018 00:14:54 INFO [main] Fortress - Gnomes have been placed
+16-05-2018 00:14:54 INFO [main] GameManager - Battle begins 
+16-05-2018 00:14:54 INFO [main] GameManager - Congratulations battle has ended
+16-05-2018 00:15:09 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+16-05-2018 00:15:09 INFO [main] Fortress - Gnomes have been placed
+16-05-2018 00:15:09 INFO [main] GameManager - Battle begins 
+16-05-2018 00:15:09 INFO [main] GameManager - Congratulations battle has ended
+16-05-2018 00:15:18 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+16-05-2018 00:15:18 INFO [main] Fortress - Gnomes have been placed
+16-05-2018 00:15:18 INFO [main] GameManager - Battle begins 
+16-05-2018 00:15:18 INFO [main] GameManager - Congratulations battle has ended
+16-05-2018 00:15:25 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+16-05-2018 00:15:25 INFO [main] Fortress - Gnomes have been placed
+16-05-2018 00:15:25 INFO [main] GameManager - Battle begins 
+16-05-2018 00:15:25 INFO [main] GameManager - Congratulations battle has ended
+16-05-2018 00:15:30 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+16-05-2018 00:15:30 INFO [main] Fortress - Gnomes have been placed
+16-05-2018 00:15:30 INFO [main] GameManager - Battle begins 
+16-05-2018 00:15:30 INFO [main] GameManager - Congratulations battle has ended
+16-05-2018 00:15:35 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+16-05-2018 00:15:35 INFO [main] Fortress - Gnomes have been placed
+16-05-2018 00:15:35 INFO [main] GameManager - Battle begins 
+16-05-2018 00:15:35 INFO [main] GameManager - Congratulations battle has ended
+16-05-2018 00:15:40 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+16-05-2018 00:15:40 INFO [main] Fortress - Gnomes have been placed
+16-05-2018 00:15:40 INFO [main] GameManager - Battle begins 
+16-05-2018 00:15:40 INFO [main] GameManager - Congratulations battle has ended
+16-05-2018 00:15:49 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+16-05-2018 00:15:49 INFO [main] Fortress - Gnomes have been placed
+16-05-2018 00:15:49 INFO [main] GameManager - Battle begins 
+16-05-2018 00:15:49 INFO [main] GameManager - Congratulations battle has ended
+16-05-2018 00:15:55 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+16-05-2018 00:15:55 INFO [main] Fortress - Gnomes have been placed
+16-05-2018 00:15:55 INFO [main] GameManager - Battle begins 
+16-05-2018 00:15:55 INFO [main] GameManager - Congratulations battle has ended
+16-05-2018 00:16:02 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+16-05-2018 00:16:02 INFO [main] Fortress - Gnomes have been placed
+16-05-2018 00:16:02 INFO [main] GameManager - Battle begins 
+16-05-2018 00:16:02 INFO [main] GameManager - Congratulations battle has ended
+16-05-2018 00:16:10 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+16-05-2018 00:16:10 INFO [main] Fortress - Gnomes have been placed
+16-05-2018 00:16:10 INFO [main] GameManager - Battle begins 
+16-05-2018 00:16:10 INFO [main] GameManager - Congratulations battle has ended
+16-05-2018 00:16:15 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+16-05-2018 00:16:15 INFO [main] Fortress - Gnomes have been placed
+16-05-2018 00:16:15 INFO [main] GameManager - Battle begins 
+16-05-2018 00:16:15 INFO [main] GameManager - Congratulations battle has ended
+16-05-2018 00:16:19 INFO [main] GameManager - 3 groups have been made with 4 gnomes per group
+16-05-2018 00:16:19 INFO [main] Fortress - Gnomes have been placed
+16-05-2018 00:16:19 INFO [main] GameManager - Battle begins 
+16-05-2018 00:16:19 INFO [main] GameManager - Congratulations battle has ended

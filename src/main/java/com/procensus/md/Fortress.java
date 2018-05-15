@@ -146,45 +146,24 @@ class Fortress {
     }
 
 
-    void moveNorth(int groupId, Gnome gnome, Tile currLocation) {
-        Tile newLocation = floorPlan[currLocation.getRow() - 1][currLocation.getColumn()];
-        if (checkForPotionsAndBombs(newLocation, gnome)) {
-            return;
+    void moveGnome(String direction, int groupId, Gnome gnome, Tile currLocation) {
+        Tile newLocation = null;
+
+        switch (direction) {
+            case "N":
+                newLocation = floorPlan[currLocation.getRow() - 1][currLocation.getColumn()];
+                break;
+            case "S":
+                newLocation = floorPlan[currLocation.getRow() + 1][currLocation.getColumn()];
+                break;
+            case "E":
+                newLocation = floorPlan[currLocation.getRow()][currLocation.getColumn() + 1];
+                break;
+            case "W":
+                newLocation = floorPlan[currLocation.getRow()][currLocation.getColumn() - 1];
+                break;
         }
-
-        newLocation.moveIndicator(currLocation, groupId);
-        currLocation.removeGnome();
-        newLocation.setGnome(gnome);
-        gnome.setTile(newLocation);
-    }
-
-    void moveSouth(int groupId, Gnome gnome, Tile currLocation) {
-        Tile newLocation = floorPlan[currLocation.getRow() + 1][currLocation.getColumn()];
-        if (checkForPotionsAndBombs(newLocation, gnome)) {
-            return;
-        }
-
-        newLocation.moveIndicator(currLocation, groupId);
-        currLocation.removeGnome();
-        newLocation.setGnome(gnome);
-        gnome.setTile(newLocation);
-    }
-
-    void moveWest(int groupId, Gnome gnome, Tile currLocation) {
-        Tile newLocation = floorPlan[currLocation.getRow()][currLocation.getColumn() - 1];
-        if (checkForPotionsAndBombs(newLocation, gnome)) {
-            return;
-        }
-
-        newLocation.moveIndicator(currLocation, groupId);
-        currLocation.removeGnome();
-        newLocation.setGnome(gnome);
-        gnome.setTile(newLocation);
-    }
-
-    void moveEast(int groupId, Gnome gnome, Tile currLocation) {
-        Tile newLocation = floorPlan[currLocation.getRow()][currLocation.getColumn() + 1];
-        if (checkForPotionsAndBombs(newLocation, gnome)) {
+        if (newLocation != null && checkForPotionsAndBombs(newLocation, gnome)) {
             return;
         }
 

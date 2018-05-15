@@ -69,7 +69,7 @@ class GameManager {
         return gnomeCounter > 1;
     }
 
-    private void getWinningGroup(){
+    private void getWinningGroup() {
 
     }
 
@@ -100,29 +100,25 @@ class GameManager {
         // check if a Gnome is North
         if (fortress.isNorthReachable(currLocation) != null && fortress.isNorthReachable(currLocation).isGnome()) {
             Gnome otherGnome = fortress.isNorthReachable(currLocation).getGnome();     // store that unknown Gnome
-            encounter(gnome, otherGnome);
-            fortress.moveNorth(groupId, gnome, currLocation);                          // move current Gnome to that location
+            encounter("N", gnome, otherGnome);
             return true;
 
             // check if a Gnome is South
         } else if (fortress.isSouthReachable(currLocation) != null && fortress.isSouthReachable(currLocation).isGnome()) {
             Gnome otherGnome = fortress.isSouthReachable(currLocation).getGnome();     // store that unknown Gnome
-            encounter(gnome, otherGnome);
-            fortress.moveSouth(groupId, gnome, currLocation);                          // move current Gnome to that location
+            encounter("S", gnome, otherGnome);
             return true;
 
             // check if a Gnome is East
         } else if (fortress.isEastReachable(currLocation) != null && fortress.isEastReachable(currLocation).isGnome()) {
             Gnome otherGnome = fortress.isEastReachable(currLocation).getGnome();     // store that unknown Gnome
-            encounter(gnome, otherGnome);
-            fortress.moveEast(groupId, gnome, currLocation);                          // move current Gnome to that location
+            encounter("E", gnome, otherGnome);
             return true;
 
             // check if a Gnome is West
         } else if (fortress.isWestReachable(currLocation) != null && fortress.isWestReachable(currLocation).isGnome()) {
             Gnome otherGnome = fortress.isWestReachable(currLocation).getGnome();     // store that unknown Gnome
-            encounter(gnome, otherGnome);
-            fortress.moveWest(groupId, gnome, currLocation);                          // move current Gnome to that location
+            encounter("W", gnome, otherGnome);
             return true;
         }
         return false;
@@ -134,7 +130,7 @@ class GameManager {
      * 2 - Gnomes A is stronger or equal to Gnome B's strength. Gnome A kills B.
      * 3 - Gnome B is stronger than Gnome A, B kills A
      */
-    private void encounter(Gnome gnome, Gnome otherGnome) {
+    private void encounter(String direction, Gnome gnome, Gnome otherGnome) {
         if (gnome.getGroupId() == otherGnome.getGroupId()) {
             // same team - combine Gnome strengths
             System.out.println("gnome " + otherGnome.getId() + " from team " + otherGnome.getGroupId() +
@@ -143,6 +139,8 @@ class GameManager {
                     (otherGnome.getStrength() + gnome.getStrength()) + " gnome");
             otherGnome.merge(gnome);
             gnome.getTile().removeGnome();      // remove this Gnome from the fortress
+
+            fortress.moveGnome(direction, otherGnome.getGroupId(), otherGnome, gnome.getTile());                     // move current Gnome to that location
         } else if (gnome.getStrength() >= otherGnome.getStrength()) {
             // fight
             System.out.println("gnome " + gnome.getId() + " from team " + gnome.getGroupId() +
@@ -150,6 +148,8 @@ class GameManager {
                     " have fought at " + otherGnome.getTile().getCoordinates() +
                     " and gnome " + gnome.getId() + " from team " + gnome.getGroupId() + " was victorious");
             otherGnome.kill();          // remove the defeated Gnome from the Fortress
+
+            fortress.moveGnome(direction, gnome.getGroupId(), gnome, gnome.getTile());                     // move current Gnome to that location
         } else {
             // fight
             System.out.println("gnome " + gnome.getId() + " from team " + gnome.getGroupId() +
@@ -157,6 +157,7 @@ class GameManager {
                     " have fought at " + otherGnome.getTile().getCoordinates() +
                     " and gnome " + otherGnome.getId() + " from team " + otherGnome.getGroupId() + " was victorious");
             gnome.kill();               // remove the defeated Gnome from the Fortress
+            fortress.moveGnome(direction, otherGnome.getGroupId(), otherGnome, gnome.getTile());                     // move current Gnome to that location
         }
     }
 
@@ -196,16 +197,16 @@ class GameManager {
 
         switch (direction) {
             case "N":
-                fortress.moveNorth(groupId, gnome, currLocation);
+                fortress.moveGnome("N", groupId, gnome, currLocation);
                 break;
             case "S":
-                fortress.moveSouth(groupId, gnome, currLocation);
+                fortress.moveGnome("S", groupId, gnome, currLocation);
                 break;
             case "E":
-                fortress.moveEast(groupId, gnome, currLocation);
+                fortress.moveGnome("E", groupId, gnome, currLocation);
                 break;
             case "W":
-                fortress.moveWest(groupId, gnome, currLocation);
+                fortress.moveGnome("W", groupId, gnome, currLocation);
                 break;
         }
     }
