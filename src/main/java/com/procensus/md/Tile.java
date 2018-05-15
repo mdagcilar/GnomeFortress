@@ -1,10 +1,8 @@
 package com.procensus.md;
 
-import java.util.List;
-
 class Tile {
 
-    private char character;
+    private Character character;
     private int row, column;
 
     Tile(char character, int row, int column) {
@@ -41,11 +39,11 @@ class Tile {
 
     // Returns true if the tile is a Gnome
     boolean isGnome() {
-        return character != 'G';
+        return Character.isDigit(character);
     }
 
-    void addGnome() {
-        character = 'G';
+    void addGnome(int id) {
+        character = (char)(id+'0');
     }
 
     void removeGnome() {

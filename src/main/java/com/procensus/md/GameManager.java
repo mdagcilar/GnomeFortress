@@ -45,11 +45,9 @@ class GameManager {
     void beginFight() {
         logger.info("Let the game begin");
 
-        move();
-
-//        while (atLeast2GnomesAlive()) {
-//            move();
-//        }
+        while (atLeast2GnomesAlive()) {
+            move();
+        }
         logger.info("Winner! Game has ended");
     }
 
@@ -68,11 +66,11 @@ class GameManager {
     private void move() {
         for (Group group : groups) {
             for (Gnome gnome : group.getGnomeList()) {
-                if (moveToAdjGnome(gnome)) {
+                if (moveToAdjGnome(group.getId(), gnome)) {
                     // made the move, now fight or combine
                     break;
                 } else {
-                    moveRandom(gnome);
+                    moveRandom(group.getId(), gnome);
                     // made the move, now fight or combine
                 }
             }
@@ -86,17 +84,18 @@ class GameManager {
      *
      * @return
      */
-    private boolean moveToAdjGnome(Gnome gnome) {
+    private boolean moveToAdjGnome(int groupId, Gnome gnome) {
         return false;
     }
 
-    private void moveRandom(Gnome gnome) {
+    private void moveRandom(int groupId, Gnome gnome) {
         List<String> directions = Arrays.asList("N", "S", "E", "W");
         Collections.shuffle(directions);    // randomly sort array
 
+
         for (String direction : directions) {
             if (validMove(gnome, direction)) {
-                moveGnome(gnome, direction);
+                moveGnome(groupId, gnome, direction);
                 return;
             }
         }
@@ -112,14 +111,16 @@ class GameManager {
             case "S":
                 return floorPlan[currLocation.getRow() + 1][currLocation.getColumn()].isWalkable();
             case "E":
-                return floorPlan[currLocation.getRow()][currLocation.getColumn() - 1].isWalkable();
-            case "W":
                 return floorPlan[currLocation.getRow()][currLocation.getColumn() + 1].isWalkable();
+            case "W":
+                if (currLocation.getColumn() == 0)
+                    return false;
+                return floorPlan[currLocation.getRow()][currLocation.getColumn() - 1].isWalkable();
         }
         return false;
     }
 
-    private void moveGnome(Gnome gnome, String direction) {
+    private void moveGnome(int groupId, Gnome gnome, String direction) {
         Tile[][] floorPlan = fortress.getFloorPlan();
         Tile currLocation = gnome.getTile();
         Tile nextLocation;
@@ -128,23 +129,27 @@ class GameManager {
             case "N":
                 nextLocation = floorPlan[currLocation.getRow() - 1][currLocation.getColumn()];
                 currLocation.removeGnome();
-                nextLocation.addGnome();
+                nextLocation.addGnome(groupId);
                 gnome.setTile(nextLocation);
+                break;
             case "S":
                 nextLocation = floorPlan[currLocation.getRow() + 1][currLocation.getColumn()];
                 currLocation.removeGnome();
-                nextLocation.addGnome();
+                nextLocation.addGnome(groupId);
                 gnome.setTile(nextLocation);
+                break;
             case "E":
-                nextLocation = floorPlan[currLocation.getRow()][currLocation.getColumn() - 1];
-                currLocation.removeGnome();
-                nextLocation.addGnome();
-                gnome.setTile(nextLocation);
-            case "W":
                 nextLocation = floorPlan[currLocation.getRow()][currLocation.getColumn() + 1];
                 currLocation.removeGnome();
-                nextLocation.addGnome();
+                nextLocation.addGnome(groupId);
                 gnome.setTile(nextLocation);
+                break;
+            case "W":
+                nextLocation = floorPlan[currLocation.getRow()][currLocation.getColumn() - 1];
+                currLocation.removeGnome();
+                nextLocation.addGnome(groupId);
+                gnome.setTile(nextLocation);
+                break;
         }
     }
 

@@ -24,7 +24,7 @@ class Gnome {
 
     void setTile(Tile tile) {
         this.tile = tile;
-        tile.addGnome();
+        //tile.addGnome();
     }
 
     /**
