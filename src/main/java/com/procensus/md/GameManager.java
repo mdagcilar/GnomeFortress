@@ -51,7 +51,7 @@ class GameManager {
         while (atLeastTwoEnemyGnomesAlive()) {
             move();
         }
-        fortress.printFloorPlan();
+        //fortress.printFloorPlan();
         logger.info("Congratulations battle has ended");
     }
 
@@ -84,9 +84,11 @@ class GameManager {
             for (Gnome gnome : group.getGnomeList()) {
                 if (gnome.isAlive() && moveToAdjGnome(group.getId(), gnome)) {
                     // made the encounter move
+                    fortress.printFloorPlan();
                     break;
                 } else if (gnome.isAlive()) {
                     moveRandom(group.getId(), gnome);
+                    fortress.printFloorPlan();
                 }
             }
         }
@@ -144,15 +146,15 @@ class GameManager {
             gnome.getTile().removeGnome();      // remove this Gnome from the fortress
         } else if (gnome.getStrength() >= otherGnome.getStrength()) {
             // fight
-            System.out.println("gnome " + otherGnome.getId() + " from team " + otherGnome.getGroupId() +
-                    ", gnome " + gnome.getId() + " from team " + gnome.getGroupId() +
+            System.out.println("gnome " + gnome.getId() + " from team " + gnome.getGroupId() +
+                    ", gnome " + otherGnome.getId() + " from team " + otherGnome.getGroupId() +
                     " have fought at " + otherGnome.getTile().getCoordinates() +
                     " and gnome " + gnome.getId() + " from team " + gnome.getGroupId() + " was victorious");
             otherGnome.kill();          // remove the defeated Gnome from the Fortress
         } else {
             // fight
-            System.out.println("gnome " + otherGnome.getId() + " from team " + otherGnome.getGroupId() +
-                    ", gnome " + gnome.getId() + " from team " + gnome.getGroupId() +
+            System.out.println("gnome " + gnome.getId() + " from team " + gnome.getGroupId() +
+                    ", gnome " + otherGnome.getId() + " from team " + otherGnome.getGroupId() +
                     " have fought at " + otherGnome.getTile().getCoordinates() +
                     " and gnome " + otherGnome.getId() + " from team " + otherGnome.getGroupId() + " was victorious");
             gnome.kill();               // remove the defeated Gnome from the Fortress

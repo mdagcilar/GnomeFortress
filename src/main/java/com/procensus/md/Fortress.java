@@ -89,7 +89,7 @@ class Fortress {
                 int randomTile = random.nextInt(availableTitles.size());    // gets a random int within range
 
                 gnome.setTile(availableTitles.get(randomTile));             // adds a Tile to the Gnome
-                availableTitles.get(randomTile).setGnome(gnome);            // adds a 'G' character to the floor plan
+                availableTitles.get(randomTile).setGnome(gnome);            // adds the GroupId to the floor plan
 
                 availableTitles.remove(randomTile);                         // remove the Tile from the List
             }
@@ -193,9 +193,9 @@ class Fortress {
             System.out.println("gnome " + gnome.getId() + " from team " + gnome.getGroupId()
                     + " consumed a health potion at " + newLocation.getCoordinates() + " increasing hit points by 5, new hp: " + gnome.getStrength());
         } else if (newLocation.isBomb()) {
-            gnome.kill();
             System.out.println("gnome " + gnome.getId() + " from team " + gnome.getGroupId()
                     + " just uncovered a bomb at " + newLocation.getCoordinates() + " and died instantly from the blast!");
+            gnome.kill();
         }
     }
 }
