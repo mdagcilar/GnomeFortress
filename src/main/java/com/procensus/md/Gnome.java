@@ -2,16 +2,22 @@ package com.procensus.md;
 
 class Gnome {
     private int id;
+    private int groupId;
     private int strength;
     private Tile tile;
 
-    Gnome(int id, int strength) {
+    Gnome(int groupId, int id, int strength) {
+        this.groupId = groupId;
         this.id = id;
         this.strength = strength;
     }
 
     int getId() {
         return id;
+    }
+
+    int getGroupId() {
+        return groupId;
     }
 
     int getStrength() {
@@ -24,7 +30,6 @@ class Gnome {
 
     void setTile(Tile tile) {
         this.tile = tile;
-        //tile.addGnome();
     }
 
     /**
@@ -41,7 +46,12 @@ class Gnome {
         gnome.kill(); // kill the Gnome that this Gnome joined with.
     }
 
-    private void kill() {
+    void kill() {
         strength = 0;
+        tile.removeGnome();
+    }
+
+    boolean isAlive(){
+        return strength > 0;
     }
 }

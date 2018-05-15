@@ -4,6 +4,7 @@ class Tile {
 
     private Character character;
     private int row, column;
+    private Gnome gnome;
 
     Tile(char character, int row, int column) {
         this.character = character;
@@ -15,12 +16,16 @@ class Tile {
         return character;
     }
 
-    public int getRow() {
+    int getRow() {
         return row;
     }
 
-    public int getColumn() {
+    int getColumn() {
         return column;
+    }
+
+    String getCoordinates() {
+        return "(" + getRow() + "," + getColumn() + ")";
     }
 
     @Override
@@ -42,11 +47,23 @@ class Tile {
         return Character.isDigit(character);
     }
 
-    void addGnome(int id) {
-        character = (char)(id+'0');
+    // moves the Gnome character on the map
+    void moveIndicator(Tile oldLocation, int groupId) {
+        oldLocation.character = ' ';
+        character = (char) (groupId + '0');
+    }
+
+    Gnome getGnome() {
+        return gnome;
+    }
+
+    void setGnome(Gnome gnome) {
+        this.gnome = gnome;
+        character = (char) (gnome.getGroupId() + '0');
     }
 
     void removeGnome() {
+        gnome = null;
         character = ' ';
     }
 }

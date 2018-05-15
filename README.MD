@@ -10,6 +10,7 @@ editor of the floor plan to ensure that their are no unreachable corridors.
 * If two Gnomes from different teams encounter each other, with the same strength 
 * When the gameManager initialises and places Gnomes randomly, Gnomes cannot be placed on the same Tile as another Gnome.
 * If there is an adjacent Gnome, the Gnome will always prefer to fight because they're crazy creatures.
+* If two Gnomes strengths are equal, the attacking Gnome has advantage and kills the other.
 
 
     gnome 1 from team 2, gnome 2 from team 2 have met at (2,4) and combined into a strength 5 gnome.

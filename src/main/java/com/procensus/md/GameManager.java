@@ -19,7 +19,7 @@ class GameManager {
     void start(int noOfGroups, int noGnomesPerGroup) {
         createGroups(noOfGroups, noGnomesPerGroup);
         fortress.initGnomePositions(groups);
-        getGnomePositions();
+        //getGnomePositions();
         beginFight();
     }
 
@@ -45,17 +45,34 @@ class GameManager {
     void beginFight() {
         logger.info("Let the game begin");
 
-        while (atLeast2GnomesAlive()) {
+        while (atLeastTwoEnemyGnomesAlive()) {
             move();
         }
+        fortress.printFloorPlan();
         logger.info("Winner! Game has ended");
     }
 
     // Return true if at least 2 Gnomes still live
-    private boolean atLeast2GnomesAlive() {
+    private boolean atLeastTwoEnemyGnomesAlive() {
+        int gnomeCounter = 0;
+        for (Group group : groups) {
 
-        return true;
+            for (Gnome gnome : group.getGnomeList()) {
+                if (gnome.isAlive()) {
+                    gnomeCounter++;
+                    break;
+                }
+            }
+        }
+
+        return gnomeCounter > 1;
     }
+
+    /**
+     * Loop through all Gnomes in each Group
+     *    Each Gnome looks for another Gnome
+     *         Either Combines or Fights
+     */
 
     /**
      * Loop through all Gnomes in each Group and make one move.
@@ -66,32 +83,89 @@ class GameManager {
     private void move() {
         for (Group group : groups) {
             for (Gnome gnome : group.getGnomeList()) {
-                if (moveToAdjGnome(group.getId(), gnome)) {
+                if (gnome.isAlive() && moveToAdjGnome(group.getId(), gnome)) {
                     // made the move, now fight or combine
-                    break;
-                } else {
+                } else if (gnome.isAlive()) {
                     moveRandom(group.getId(), gnome);
-                    // made the move, now fight or combine
                 }
             }
         }
-        logger.info("All Gnomes have moved one space");
-        fortress.printFloorPlan();
+        //logger.info("All Gnomes have moved one space");
+        //fortress.printFloorPlan();
     }
 
-    /**
-     * Check
-     *
-     * @return
-     */
     private boolean moveToAdjGnome(int groupId, Gnome gnome) {
+        Tile currLocation = gnome.getTile();
+
+        if (fortress.isNorthReachable(currLocation) != null && fortress.isNorthReachable(currLocation).isGnome()) {                              // check if a Gnome is North
+            Gnome otherGnome = fortress.isNorthReachable(currLocation).getGnome();            // store that unknown Gnome
+
+            join(gnome, otherGnome);
+
+            fortress.moveNorth(groupId, gnome, currLocation);                          // move current Gnome to that location
+            return true;
+        } else if (fortress.isSouthReachable(currLocation) != null && fortress.isSouthReachable(currLocation).isGnome()) {                     // check if a Gnome is South
+            Gnome otherGnome = fortress.isSouthReachable(currLocation).getGnome();            // store that unknown Gnome
+
+            join(gnome, otherGnome);
+
+            fortress.moveSouth(groupId, gnome, currLocation);                          // move current Gnome to that location
+            return true;
+        } else if (fortress.isWestReachable(currLocation) != null && fortress.isWestReachable(currLocation).isGnome()) {                    // check if a Gnome is East
+            Gnome otherGnome = fortress.isWestReachable(currLocation).getGnome();            // store that unknown Gnome
+
+            join(gnome, otherGnome);
+
+            fortress.moveWest(groupId, gnome, currLocation);                          // move current Gnome to that location
+            return true;
+        } else if (fortress.isEastReachable(currLocation) != null && fortress.isEastReachable(currLocation).isGnome()) {                     // check if a Gnome is West
+            Gnome otherGnome = fortress.isEastReachable(currLocation).getGnome();            // store that unknown Gnome
+
+            join(gnome, otherGnome);
+
+            fortress.moveEast(groupId, gnome, currLocation);                          // move current Gnome to that location
+
+            return true;
+        }
         return false;
     }
 
+    /**
+     * When Gnomes meet in the Fortress, 3 things can potentially occur
+     * 1 - Gnomes are from the same team, and combine strengths into a larger Gnome
+     * 2 - Gnomes A is stronger or equal to Gnome B's strength. Gnome A kills B.
+     * 3 - Gnome B is stronger than Gnome A, B kills A
+     */
+    private void join(Gnome gnome, Gnome otherGnome) {
+        if (gnome.getGroupId() == otherGnome.getGroupId()) {
+            // same team - combine Gnome strengths
+            System.out.println("gnome " + otherGnome.getId() + " from team " + otherGnome.getGroupId() +
+                    ", gnome " + gnome.getId() + " from team " + gnome.getGroupId() +
+                    " have met at " + otherGnome.getTile().getCoordinates() + " and combined into a strength " +
+                    (otherGnome.getStrength() + gnome.getStrength()) + " gnome");
+            otherGnome.merge(gnome);
+            gnome.getTile().removeGnome();      // remove this Gnome from the fortress
+        } else if (gnome.getStrength() >= otherGnome.getStrength()) {
+            // fight
+            System.out.println("gnome " + otherGnome.getId() + " from team " + otherGnome.getGroupId() +
+                    ", gnome " + gnome.getId() + " from team " + gnome.getGroupId() +
+                    " have fought at " + otherGnome.getTile().getCoordinates() +
+                    " and gnome " + gnome.getId() + " from team " + gnome.getGroupId() + " was victorious");
+            otherGnome.kill();          // remove the defeated Gnome from the Fortress
+        } else {
+            // fight
+            System.out.println("gnome " + otherGnome.getId() + " from team " + otherGnome.getGroupId() +
+                    ", gnome " + gnome.getId() + " from team " + gnome.getGroupId() +
+                    " have fought at " + otherGnome.getTile().getCoordinates() +
+                    " and gnome " + otherGnome.getId() + " from team " + otherGnome.getGroupId() + " was victorious");
+            gnome.kill();               // remove the defeated Gnome from the Fortress
+        }
+    }
+
+    // Loops through a shuffled list of directions, until a valid move is found and executed
     private void moveRandom(int groupId, Gnome gnome) {
         List<String> directions = Arrays.asList("N", "S", "E", "W");
         Collections.shuffle(directions);    // randomly sort array
-
 
         for (String direction : directions) {
             if (validMove(gnome, direction)) {
@@ -101,54 +175,39 @@ class GameManager {
         }
     }
 
+    // Checks the validity of the move and returns a boolean flag
     private boolean validMove(Gnome gnome, String direction) {
-        Tile[][] floorPlan = fortress.getFloorPlan();
         Tile currLocation = gnome.getTile();
 
         switch (direction) {
             case "N":
-                return floorPlan[currLocation.getRow() - 1][currLocation.getColumn()].isWalkable();
+                return fortress.isNorthReachable(currLocation) != null && fortress.isNorthReachable(currLocation).isWalkable();
             case "S":
-                return floorPlan[currLocation.getRow() + 1][currLocation.getColumn()].isWalkable();
+                return fortress.isSouthReachable(currLocation) != null && fortress.isSouthReachable(currLocation).isWalkable();
             case "E":
-                return floorPlan[currLocation.getRow()][currLocation.getColumn() + 1].isWalkable();
+                return fortress.isEastReachable(currLocation) != null && fortress.isEastReachable(currLocation).isWalkable();
             case "W":
-                if (currLocation.getColumn() == 0)
-                    return false;
-                return floorPlan[currLocation.getRow()][currLocation.getColumn() - 1].isWalkable();
+                return fortress.isWestReachable(currLocation) != null && fortress.isWestReachable(currLocation).isWalkable();
         }
         return false;
     }
 
+    // Moves the Gnome in the given direction
     private void moveGnome(int groupId, Gnome gnome, String direction) {
-        Tile[][] floorPlan = fortress.getFloorPlan();
         Tile currLocation = gnome.getTile();
-        Tile nextLocation;
 
         switch (direction) {
             case "N":
-                nextLocation = floorPlan[currLocation.getRow() - 1][currLocation.getColumn()];
-                currLocation.removeGnome();
-                nextLocation.addGnome(groupId);
-                gnome.setTile(nextLocation);
+                fortress.moveNorth(groupId, gnome, currLocation);
                 break;
             case "S":
-                nextLocation = floorPlan[currLocation.getRow() + 1][currLocation.getColumn()];
-                currLocation.removeGnome();
-                nextLocation.addGnome(groupId);
-                gnome.setTile(nextLocation);
+                fortress.moveSouth(groupId, gnome, currLocation);
                 break;
             case "E":
-                nextLocation = floorPlan[currLocation.getRow()][currLocation.getColumn() + 1];
-                currLocation.removeGnome();
-                nextLocation.addGnome(groupId);
-                gnome.setTile(nextLocation);
+                fortress.moveEast(groupId, gnome, currLocation);
                 break;
             case "W":
-                nextLocation = floorPlan[currLocation.getRow()][currLocation.getColumn() - 1];
-                currLocation.removeGnome();
-                nextLocation.addGnome(groupId);
-                gnome.setTile(nextLocation);
+                fortress.moveWest(groupId, gnome, currLocation);
                 break;
         }
     }

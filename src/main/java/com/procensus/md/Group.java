@@ -3,19 +3,19 @@ package com.procensus.md;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Group {
+class Group {
     private final int GNOME_STRENGTH = 5;
-    private int id;
+    private int groupId;
     private List<Gnome> gnomeList = new ArrayList<>();
 
-    Group(int id, int numGnomes) {
-        this.id = id;
+    Group(int groupId, int numGnomes) {
+        this.groupId = groupId;
 
         createGnomes(numGnomes);
     }
 
-    public int getId() {
-        return id;
+    int getId() {
+        return groupId;
     }
 
     List<Gnome> getGnomeList() {
@@ -25,19 +25,11 @@ public class Group {
     /**
      * Creates a List of Gnomes with their respective id's and strength values.
      *
-     * @param numGnomes
+     * @param numGnomes - Number of Gnomes to create
      */
     private void createGnomes(int numGnomes) {
         for (int i = 1; i <= numGnomes; i++) {
-            gnomeList.add(new Gnome(i, GNOME_STRENGTH));
+            gnomeList.add(new Gnome(groupId, i, GNOME_STRENGTH));
         }
-    }
-
-    /**
-     * Removes a Gnome from the Group
-     * @param index
-     */
-    void removeGnome(int index){
-        gnomeList.remove(index);
     }
 }

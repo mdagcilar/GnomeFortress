@@ -35,4 +35,22 @@ public class TileTest {
         Tile tile = new Tile('#', 0, 0);
         assertFalse(tile.isWalkable());
     }
+
+    @Test
+    public void isGnome(){
+        Tile tile = new Tile('1', 0, 0);
+        assertTrue(tile.isGnome());
+    }
+
+    @Test
+    public void isNotGnome(){
+        Tile tile = new Tile(' ', 0, 0);
+        assertFalse(tile.isGnome());
+    }
+
+    @Test
+    public void isNotGnomeWall(){
+        Tile tile = new Tile('#', 0, 0);
+        assertFalse(tile.isGnome());
+    }
 }
