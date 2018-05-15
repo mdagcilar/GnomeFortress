@@ -8,12 +8,12 @@ public class Starter {
         initialiseLogger();
 
         if(args.length != 2){
-            System.out.println("To play Gnome Fortress please ");
-            System.out.println("Please enter two arguments: e.g. 2 4");
+            System.out.println("To simulate Gnome Fortress please enter two command line arguments e.g.: 2 4");
+            System.out.println("Or to enter them now");
+        }else {
+            GameManager gameManager = new GameManager();
+            gameManager.start(Integer.parseInt(args[0]), Integer.parseInt(args[1]));
         }
-
-        GameManager gameManager = new GameManager();
-        gameManager.start(Integer.parseInt(args[0]), Integer.parseInt(args[1]));
     }
 
     private static void initialiseLogger() {

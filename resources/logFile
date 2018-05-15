@@ -1,23 +1,4 @@
-14-05-2018 23:20:14 INFO [main] GameManager - Groups have been made
-14-05-2018 23:20:14 INFO [main] Fortress - Gnomes have been placed
-14-05-2018 23:20:14 INFO [main] GameManager - Let the game begin
-14-05-2018 23:20:14 INFO [main] GameManager - All Gnomes have moved one space
-14-05-2018 23:20:14 INFO [main] GameManager - Winner! Game has ended
-14-05-2018 23:26:09 INFO [main] GameManager - Groups have been made
-14-05-2018 23:26:46 INFO [main] GameManager - Groups have been made
-14-05-2018 23:28:33 INFO [main] GameManager - Groups have been made
-14-05-2018 23:30:29 INFO [main] GameManager - Groups have been made
-14-05-2018 23:30:29 INFO [main] Fortress - Gnomes have been placed
-14-05-2018 23:30:29 INFO [main] GameManager - Let the game begin
-14-05-2018 23:30:29 INFO [main] GameManager - All Gnomes have moved one space
-14-05-2018 23:30:29 INFO [main] GameManager - Winner! Game has ended
-14-05-2018 23:33:31 INFO [main] GameManager - Groups have been made
-14-05-2018 23:33:31 INFO [main] Fortress - Gnomes have been placed
-14-05-2018 23:33:31 INFO [main] GameManager - Let the game begin
-14-05-2018 23:33:31 INFO [main] GameManager - All Gnomes have moved one space
-14-05-2018 23:33:31 INFO [main] GameManager - Winner! Game has ended
-14-05-2018 23:33:42 INFO [main] GameManager - Groups have been made
-14-05-2018 23:33:42 INFO [main] Fortress - Gnomes have been placed
-14-05-2018 23:33:42 INFO [main] GameManager - Let the game begin
-14-05-2018 23:33:42 INFO [main] GameManager - All Gnomes have moved one space
-14-05-2018 23:33:42 INFO [main] GameManager - Winner! Game has ended
+15-05-2018 19:49:21 INFO [main] GameManager - 2 groups have been made with 10 gnomes per group
+15-05-2018 19:49:21 INFO [main] Fortress - Gnomes have been placed
+15-05-2018 19:49:21 INFO [main] GameManager - Battle begins 
+15-05-2018 19:49:21 INFO [main] GameManager - Congratulations battle has ended

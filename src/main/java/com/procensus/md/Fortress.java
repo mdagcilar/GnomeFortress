@@ -20,11 +20,6 @@ class Fortress {
         readAndBuildFortress();
     }
 
-    public Tile[][] getFloorPlan() {
-        return floorPlan;
-    }
-
-
     // Reads in the floor plan and builds a 2D array of tiles.
     private void readAndBuildFortress() {
         initialiseFloorPlan();
