@@ -104,7 +104,7 @@ class Fortress {
 
         for (Tile[] tileArray : floorPlan) {
             for (Tile tile : tileArray) {
-                if (tile.isWalkable()) {
+                if (tile.isWalkable() && !tile.isBomb() && !tile.isHealthPotion()) {
                     availableTiles.add(tile);
                 }
             }
@@ -148,7 +148,9 @@ class Fortress {
 
     void moveNorth(int groupId, Gnome gnome, Tile currLocation) {
         Tile newLocation = floorPlan[currLocation.getRow() - 1][currLocation.getColumn()];
-        checkForPotionsAndBombs(newLocation, gnome);
+        if (checkForPotionsAndBombs(newLocation, gnome)) {
+            return;
+        }
 
         newLocation.moveIndicator(currLocation, groupId);
         currLocation.removeGnome();
@@ -158,7 +160,9 @@ class Fortress {
 
     void moveSouth(int groupId, Gnome gnome, Tile currLocation) {
         Tile newLocation = floorPlan[currLocation.getRow() + 1][currLocation.getColumn()];
-        checkForPotionsAndBombs(newLocation, gnome);
+        if (checkForPotionsAndBombs(newLocation, gnome)) {
+            return;
+        }
 
         newLocation.moveIndicator(currLocation, groupId);
         currLocation.removeGnome();
@@ -168,7 +172,9 @@ class Fortress {
 
     void moveWest(int groupId, Gnome gnome, Tile currLocation) {
         Tile newLocation = floorPlan[currLocation.getRow()][currLocation.getColumn() - 1];
-        checkForPotionsAndBombs(newLocation, gnome);
+        if (checkForPotionsAndBombs(newLocation, gnome)) {
+            return;
+        }
 
         newLocation.moveIndicator(currLocation, groupId);
         currLocation.removeGnome();
@@ -178,7 +184,9 @@ class Fortress {
 
     void moveEast(int groupId, Gnome gnome, Tile currLocation) {
         Tile newLocation = floorPlan[currLocation.getRow()][currLocation.getColumn() + 1];
-        checkForPotionsAndBombs(newLocation, gnome);
+        if (checkForPotionsAndBombs(newLocation, gnome)) {
+            return;
+        }
 
         newLocation.moveIndicator(currLocation, groupId);
         currLocation.removeGnome();
@@ -187,15 +195,21 @@ class Fortress {
     }
 
     // Checks the Tile for health potions and bombs on the floor plan
-    private void checkForPotionsAndBombs(Tile newLocation, Gnome gnome) {
+    private boolean checkForPotionsAndBombs(Tile newLocation, Gnome gnome) {
         if (newLocation.isHealthPotion()) {
             gnome.consumeHealthPotion();
             System.out.println("gnome " + gnome.getId() + " from team " + gnome.getGroupId()
                     + " consumed a health potion at " + newLocation.getCoordinates() + " increasing hit points by 5, new hp: " + gnome.getStrength());
+            printFloorPlan();
+            return false;   // return false because we want the call to continue
         } else if (newLocation.isBomb()) {
             System.out.println("gnome " + gnome.getId() + " from team " + gnome.getGroupId()
                     + " just uncovered a bomb at " + newLocation.getCoordinates() + " and died instantly from the blast!");
             gnome.kill();
+            floorPlan[newLocation.getRow()][newLocation.getColumn()].removeGnome();
+            printFloorPlan();
+            return true;
         }
+        return false;
     }
 }

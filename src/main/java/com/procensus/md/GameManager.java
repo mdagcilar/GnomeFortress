@@ -51,8 +51,8 @@ class GameManager {
         while (atLeastTwoEnemyGnomesAlive()) {
             move();
         }
-        //fortress.printFloorPlan();
         logger.info("Congratulations battle has ended");
+        fortress.printFloorPlan();
     }
 
     // Return true if at least 2 Gnomes still live
@@ -88,7 +88,6 @@ class GameManager {
                     break;
                 } else if (gnome.isAlive()) {
                     moveRandom(group.getId(), gnome);
-                    fortress.printFloorPlan();
                 }
             }
         }
