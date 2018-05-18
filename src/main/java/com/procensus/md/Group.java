@@ -14,10 +14,6 @@ class Group {
         createGnomes(numGnomes);
     }
 
-    int getId() {
-        return groupId;
-    }
-
     List<Gnome> getGnomeList() {
         return gnomeList;
     }

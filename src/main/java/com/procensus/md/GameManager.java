@@ -22,20 +22,29 @@ class GameManager {
     void start(int noOfGroups, int noGnomesPerGroup) {
         createGroups(noOfGroups, noGnomesPerGroup);
         fortress.initGnomePositions(groups);
-        //getGnomePositions();
         beginBattle();
     }
 
     /**
-     * Creates N groups of M gnomes and add them to the List of Groups
+     * Creates N groups of M gnomes and add them to the List of Groups.
      *
      * @param noOfGroups       - number of Groups to create
      * @param noGnomesPerGroup - number of Gnomes to have per Group created
      */
     private void createGroups(int noOfGroups, int noGnomesPerGroup) {
+        // Error handling to check if their are an available number of spaces to create all the Gnomes
+        int maxNumberOfGnomes = fortress.getAvailableStartingPositions().size();
+
+        if (noOfGroups * noGnomesPerGroup > maxNumberOfGnomes) {
+            logger.error("Number of Gnomes to create (" + (noOfGroups * noGnomesPerGroup)
+                    + ") exceeds the number of free corridor spaces in the floor plan (" + maxNumberOfGnomes + ")");
+            System.exit(1);
+        }
+
         for (int i = 1; i <= noOfGroups; i++) {
             groups.add(new Group(i, noGnomesPerGroup));
         }
+
         logger.info(noOfGroups + " groups have been made with " + noGnomesPerGroup + " gnomes per group");
     }
 
@@ -51,8 +60,7 @@ class GameManager {
         while (atLeastTwoEnemyGnomesAlive()) {
             move();
         }
-        logger.info("Congratulations battle has ended");
-        fortress.printFloorPlan();
+        logger.info("Congratulations battle has ended team " + getWinningGroup() + " is victorious");
     }
 
     // Return true if at least 2 Gnomes still live
@@ -69,8 +77,16 @@ class GameManager {
         return gnomeCounter > 1;
     }
 
-    private void getWinningGroup() {
-
+    // Returns the winning Group ID to display at the end of the Game
+    private String getWinningGroup() {
+        for (Group group : groups) {
+            for (Gnome gnome : group.getGnomeList()) {
+                if (gnome.isAlive()) {
+                    return String.valueOf(gnome.getGroupId());
+                }
+            }
+        }
+        return null;
     }
 
     /**
@@ -82,19 +98,19 @@ class GameManager {
     private void move() {
         for (Group group : groups) {
             for (Gnome gnome : group.getGnomeList()) {
-                if (gnome.isAlive() && moveToAdjGnome(group.getId(), gnome)) {
+                if (gnome.isAlive() && moveToAdjGnome(gnome)) {
                     // made the encounter move
                     fortress.printFloorPlan();
                     break;
                 } else if (gnome.isAlive()) {
-                    moveRandom(group.getId(), gnome);
+                    moveRandom(gnome);
                 }
             }
         }
     }
 
     // Checks if a Gnome is N, S, E, W are next to each other, and executes the move
-    private boolean moveToAdjGnome(int groupId, Gnome gnome) {
+    private boolean moveToAdjGnome(Gnome gnome) {
         Tile currLocation = gnome.getTile();
 
         // check if a Gnome is North
@@ -130,45 +146,47 @@ class GameManager {
      * 2 - Gnomes A is stronger or equal to Gnome B's strength. Gnome A kills B.
      * 3 - Gnome B is stronger than Gnome A, B kills A
      */
-    private void encounter(String direction, Gnome gnome, Gnome otherGnome) {
+    void encounter(String direction, Gnome gnome, Gnome otherGnome) {
         if (gnome.getGroupId() == otherGnome.getGroupId()) {
             // same team - combine Gnome strengths
-            System.out.println("gnome " + otherGnome.getId() + " from team " + otherGnome.getGroupId() +
+
+            logger.info("gnome " + otherGnome.getId() + " from team " + otherGnome.getGroupId() +
                     ", gnome " + gnome.getId() + " from team " + gnome.getGroupId() +
                     " have met at " + otherGnome.getTile().getCoordinates() + " and combined into a strength " +
                     (otherGnome.getStrength() + gnome.getStrength()) + " gnome");
+
             otherGnome.merge(gnome);
             gnome.getTile().removeGnome();      // remove this Gnome from the fortress
-
-            fortress.moveGnome(direction, otherGnome.getGroupId(), otherGnome, gnome.getTile());                     // move current Gnome to that location
+            fortress.moveGnome(direction, otherGnome.getGroupId(), otherGnome, gnome.getTile());     // move current Gnome to that location
         } else if (gnome.getStrength() >= otherGnome.getStrength()) {
             // fight
-            System.out.println("gnome " + gnome.getId() + " from team " + gnome.getGroupId() +
+            logger.info("gnome " + gnome.getId() + " from team " + gnome.getGroupId() +
                     ", gnome " + otherGnome.getId() + " from team " + otherGnome.getGroupId() +
                     " have fought at " + otherGnome.getTile().getCoordinates() +
                     " and gnome " + gnome.getId() + " from team " + gnome.getGroupId() + " was victorious");
-            otherGnome.kill();          // remove the defeated Gnome from the Fortress
 
-            fortress.moveGnome(direction, gnome.getGroupId(), gnome, gnome.getTile());                     // move current Gnome to that location
+            otherGnome.kill();          // remove the defeated Gnome from the Fortress
+            fortress.moveGnome(direction, gnome.getGroupId(), gnome, gnome.getTile());              // move current Gnome to that location
         } else {
             // fight
-            System.out.println("gnome " + gnome.getId() + " from team " + gnome.getGroupId() +
+            logger.info("gnome " + gnome.getId() + " from team " + gnome.getGroupId() +
                     ", gnome " + otherGnome.getId() + " from team " + otherGnome.getGroupId() +
                     " have fought at " + otherGnome.getTile().getCoordinates() +
                     " and gnome " + otherGnome.getId() + " from team " + otherGnome.getGroupId() + " was victorious");
+
             gnome.kill();               // remove the defeated Gnome from the Fortress
-            fortress.moveGnome(direction, otherGnome.getGroupId(), otherGnome, gnome.getTile());                     // move current Gnome to that location
+            fortress.moveGnome(direction, otherGnome.getGroupId(), otherGnome, gnome.getTile());   // move current Gnome to that location
         }
     }
 
     // Loops through a shuffled list of directions, until a valid move is found and executed
-    private void moveRandom(int groupId, Gnome gnome) {
+    private void moveRandom(Gnome gnome) {
         List<String> directions = Arrays.asList("N", "S", "E", "W");
         Collections.shuffle(directions);    // randomly sort array
 
         for (String direction : directions) {
             if (validMove(gnome, direction)) {
-                moveGnome(groupId, gnome, direction);
+                moveGnome(gnome, direction);
                 return;
             }
         }
@@ -192,21 +210,21 @@ class GameManager {
     }
 
     // Moves the Gnome in the given direction
-    private void moveGnome(int groupId, Gnome gnome, String direction) {
+    private void moveGnome(Gnome gnome, String direction) {
         Tile currLocation = gnome.getTile();
 
         switch (direction) {
             case "N":
-                fortress.moveGnome("N", groupId, gnome, currLocation);
+                fortress.moveGnome("N", gnome.getGroupId(), gnome, currLocation);
                 break;
             case "S":
-                fortress.moveGnome("S", groupId, gnome, currLocation);
+                fortress.moveGnome("S", gnome.getGroupId(), gnome, currLocation);
                 break;
             case "E":
-                fortress.moveGnome("E", groupId, gnome, currLocation);
+                fortress.moveGnome("E", gnome.getGroupId(), gnome, currLocation);
                 break;
             case "W":
-                fortress.moveGnome("W", groupId, gnome, currLocation);
+                fortress.moveGnome("W", gnome.getGroupId(), gnome, currLocation);
                 break;
         }
     }

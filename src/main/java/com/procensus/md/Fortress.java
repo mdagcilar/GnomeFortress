@@ -14,17 +14,27 @@ class Fortress {
     private static org.apache.log4j.Logger logger = Logger.getLogger(Fortress.class);
 
     private Tile[][] floorPlan;
-    private final String FLOOR_PLAN_PATH = "resources/floorplan_original";
+    private String floorPlanPath = "resources/floorplan_original";
 
     Fortress() {
         readAndBuildFortress();
+    }
+
+    // Optional constructor to pass in the path to the Floor Plan
+    Fortress(String floorPlanPath) {
+        this.floorPlanPath = floorPlanPath;
+        readAndBuildFortress();
+    }
+
+    Tile[][] getFloorPlan() {
+        return floorPlan;
     }
 
     // Reads in the floor plan and builds a 2D array of tiles.
     private void readAndBuildFortress() {
         initialiseFloorPlan();
 
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(FLOOR_PLAN_PATH))) {
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(floorPlanPath))) {
 
             String line;
             int row = 0;
@@ -40,15 +50,15 @@ class Fortress {
             }
 
         } catch (FileNotFoundException e) {
-            System.out.println("FileNotFoundException: Failed to read floor plan from " + FLOOR_PLAN_PATH + e.getMessage());
+            logger.error("FileNotFoundException: Failed to read floor plan from " + floorPlanPath + e.getMessage());
         } catch (IOException e) {
-            System.out.println("IOException: " + e.getMessage());
+            logger.error("IOException: " + e.getMessage());
         }
     }
 
     // Gets the dimensions of the floor plan from the file and initialise the floor plan 2D array
     private void initialiseFloorPlan() {
-        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(FLOOR_PLAN_PATH))) {
+        try (BufferedReader bufferedReader = new BufferedReader(new FileReader(floorPlanPath))) {
 
             String line;
             int height = 0, width = 0;
@@ -60,9 +70,9 @@ class Fortress {
             floorPlan = new Tile[height][width];
 
         } catch (FileNotFoundException e) {
-            logger.debug("FileNotFoundException: Failed to read floor plan from " + FLOOR_PLAN_PATH + e.getMessage());
+            logger.error("FileNotFoundException: Failed to read floor plan from " + floorPlanPath + e.getMessage());
         } catch (IOException e) {
-            logger.debug("IOException: " + e.getMessage());
+            logger.error("IOException: " + e.getMessage());
         }
     }
 
@@ -99,7 +109,7 @@ class Fortress {
     }
 
     // Returns all white-space characters as a List of Tiles
-    private List<Tile> getAvailableStartingPositions() {
+    List<Tile> getAvailableStartingPositions() {
         List<Tile> availableTiles = new ArrayList<>();
 
         for (Tile[] tileArray : floorPlan) {
@@ -165,25 +175,27 @@ class Fortress {
         }
         if (newLocation != null && checkForPotionsAndBombs(newLocation, gnome)) {
             return;
+        } else {
+            newLocation.moveIndicator(currLocation, groupId);
+            currLocation.removeGnome();
+            newLocation.setGnome(gnome);
+            gnome.setTile(newLocation);
         }
-
-        newLocation.moveIndicator(currLocation, groupId);
-        currLocation.removeGnome();
-        newLocation.setGnome(gnome);
-        gnome.setTile(newLocation);
     }
 
     // Checks the Tile for health potions and bombs on the floor plan
     private boolean checkForPotionsAndBombs(Tile newLocation, Gnome gnome) {
         if (newLocation.isHealthPotion()) {
             gnome.consumeHealthPotion();
-            System.out.println("gnome " + gnome.getId() + " from team " + gnome.getGroupId()
-                    + " consumed a health potion at " + newLocation.getCoordinates() + " increasing hit points by 5, new hp: " + gnome.getStrength());
+            logger.info("gnome " + gnome.getId() + " from team " + gnome.getGroupId()
+                    + " consumed a health potion at " + newLocation.getCoordinates()
+                    + " increasing hit points by 5, new hp: " + gnome.getStrength());
             printFloorPlan();
             return false;   // return false because we want the call to continue
         } else if (newLocation.isBomb()) {
-            System.out.println("gnome " + gnome.getId() + " from team " + gnome.getGroupId()
-                    + " just uncovered a bomb at " + newLocation.getCoordinates() + " and died instantly from the blast!");
+            logger.info("gnome " + gnome.getId() + " from team " + gnome.getGroupId()
+                    + " just uncovered a bomb at " + newLocation.getCoordinates()
+                    + " and died instantly from the blast!");
             gnome.kill();
             floorPlan[newLocation.getRow()][newLocation.getColumn()].removeGnome();
             printFloorPlan();
